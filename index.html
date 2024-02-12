@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>sign up</h1>
+    <div>
+        <label for="input">name:</label>
+        <input id="name" type="text" placeholder="name">
+
+        <label for="input">email:</label>
+        <input id="email" type="email" placeholder="email">
+
+        <label for="input">password:</label>
+        <input id="password" type="password" placeholder="password">
+
+        <button id="btn" onclick="func()">click me</button>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+
+
+
+
+
+
+
+
+        <h2>proceed to login</h2>
+
+
+        <h1>login</h1>
+        <label for=""></label>
+        <input type="email" name="" id="emaill">
+
+        <label for=""></label>
+        <input type="password" id="passwordl">
+        <button id="btnl" onclick="func2()">login</button>
+
+
+
+
+
+
+        <script>
+            const usersdata = []
+
+
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const password = document.getElementById("password");
+            const btn = document.getElementById("btn");
+
+
+            const func = () => {
+                const userdata = {
+                    "name": name.value,
+                    "email": email.value,
+                    "password": password.value
+                }
+                usersdata.push(userdata)
+                console.log(usersdata);
+            }
+
+            const emaill = document.getElementById('emaill')
+            const passwordl = document.getElementById('passwordl')
+            const btnl = document.getElementById('btnl')
+            // const loginDetail = {
+            //     "email": emaill.value,
+            //     "password": passwordl.value
+            // }
+            
+            
+            const func2 = () => {
+                
+                for (const item of usersdata) {
+                    if (emaill.value === item.email && passwordl.value ===item.password) {
+                        console.log("login success")
+                    }
+                    else {
+                        console.log("login failed")
+                    }
+                }
+
+            }
+
+
+
+
+        </script>
+
+    </div>
+</body>
+
+</html>
